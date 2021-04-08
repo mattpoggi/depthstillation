@@ -215,18 +215,21 @@ for idm in range(args.num_motions):
 		# Loop over objects
 		for l in range(len(labels)):
 
+			seed=1
+			# We multiply the sign by -1 to obtain a motion similar to the one shown in the supplementary (not exactly the same). Can be removed for general-purpose use
+			if not args.no_depth:
+				seed=-1
+			
 			# Random t (scalars and signs). Zeros and small motions are avoided as before
-			# We add minus out of sign generation to obtain a motion similar to the one shown in the supplementary (not exactly the same). Can be removed for general-purpose use
-			cix = (random.random()*0.05+0.05)* ( -(-1)**random.randrange(2) )
-			ciy = (random.random()*0.05+0.05)* ( -(-1)**random.randrange(2) )
-			ciz = (random.random()*0.05+0.05)* ( -(-1)**random.randrange(2) )
+			cix = (random.random()*0.05+0.05)* ( sign*(-1)**random.randrange(2) )
+			ciy = (random.random()*0.05+0.05)* ( sign*(-1)**random.randrange(2) )
+			ciz = (random.random()*0.05+0.05)* ( sign*(-1)**random.randrange(2) )
 			camerai_mot = [cix, ciy, ciz]
 
 			# Random Euler angles (scalars and signs). Zeros and small rotations are avoided as before
-			# We add minus out of sign generation to obtain a motion similar to the one shown in the supplementary (not exactly the same). Can be removed for general-purpose use
-			aix = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( -(-1)**random.randrange(2) )
-			aiy = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( -(-1)**random.randrange(2) )
-			aiz = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( -(-1)**random.randrange(2) )
+			aix = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( sign*(-1)**random.randrange(2) )
+			aiy = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( sign*(-1)**random.randrange(2) )
+			aiz = (random.random()*math.pi / 72.0 + math.pi / 72.0) * ( sign*(-1)**random.randrange(2) )
 			camerai_ang = [aix, aiy, aiz]
 
 			ai =  torch.from_numpy(np.array([[camerai_ang]], dtype=np.float32))
