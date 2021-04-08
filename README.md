@@ -78,6 +78,20 @@ For instance, to simulate a different `K` settings, just run:
 python depthstillation.py --change_k
 ```
 
+The results are saved in `dCOCO` folder, organized as follows:
+* `depth_color:` colored depth map
+* `flow`: generated flow labels (in 16bit KITTI format)
+* `flow_color`: colored flow labels
+* `H`: H mask
+* `H'`: H' mask
+* `im0`: real input image
+* `im1`: generated virtual image
+* `im1_raw`: generated virtual image (pre-inpainting)
+* `instances_color`: colored instance map (if `--segment` is enabled)
+* `M`: M mask
+* `M'`: M' mask
+* `P`: P mask
+
 ## RAFT weights
 
 We provide RAFT models trained in our experiments. To run them and reproduce our results, please refer to [RAFT repository](https://github.com/princeton-vl/RAFT).
