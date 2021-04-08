@@ -70,7 +70,7 @@ These parameters are:
 * `no_depth`: disables monocular depth and force depth to assume a constant value
 * `no_sharp`: disables depth sharpening
 * `change_k`: uses different intrinsics `K`
-* `change_k`: samples a different motion
+* `change_motion`: samples a different motion
 
 For instance, to simulate a different `K` settings, just run:
 
