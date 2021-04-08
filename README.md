@@ -27,9 +27,10 @@ If you find this code useful, please cite our work:
 
 1. [Introduction](#introduction)
 2. [Usage](#usage)
-3. [RAFT weights](#results)
-4. [Contacts](#contacts)
-5. [Acknowledgments](#acknowledgments)
+3. [Supplementary](#supplementary)
+4. [Weights](#weights)
+5. [Contacts](#contacts)
+6. [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -92,7 +93,14 @@ The results are saved in `dCOCO` folder, organized as follows:
 * `M'`: M' mask
 * `P`: P mask
 
-## RAFT weights
+## Supplementary
+
+We report here the list of commands to obtain, in the same order, the Figures shown in Sections 2-4.
+* Section 2: the first figure is obtained with default parameters, then we use `--no_depth` and `--no_depth --segment` respectively
+* Section 3: the first figure is obtained with `--no_sharp`, the remaining figures with default parameters.
+* Section 4: we show three times the results obtained by default parameters, followed respectively by figures generated using `--change_k`, `--change_motion` and `--segment` individually.
+
+## Weights
 
 We provide RAFT models trained in our experiments. To run them and reproduce our results, please refer to [RAFT repository](https://github.com/princeton-vl/RAFT).
 
