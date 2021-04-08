@@ -97,7 +97,7 @@ The results are saved in `dCOCO` folder, organized as follows:
 
 We report here the list of commands to obtain, in the same order, the Figures shown in Sections 2-4.
 * Section 2: the first figure is obtained with default parameters, then we use `--no_depth` and `--no_depth --segment` respectively
-* Section 3: the first figure is obtained with `--no_sharp`, the remaining figures with default parameters.
+* Section 3: the first figure is obtained with `--no_sharp`, the remaining figures with default parameters or by setting `--mask_type "H"`.
 * Section 4: we show three times the results obtained by default parameters, followed respectively by figures generated using `--change_k`, `--change_motion` and `--segment` individually.
 
 ## Weights
