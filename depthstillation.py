@@ -43,6 +43,10 @@ parser.add_argument("--change_k", dest="change_k", action="store_true", help="Us
 parser.add_argument("--change_motion", dest="change_motion", action="store_true", help="Sample a different random motion")
 args = parser.parse_args()
 
+# if num_motions greater than 1, ignore change_motion setting
+if args.num_motions > 1:
+	args.change_motion = False
+
 # Init progress bar
 pbar = tqdm.tqdm(total=args.num_motions)
 
