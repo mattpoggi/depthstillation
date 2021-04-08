@@ -208,10 +208,10 @@ for idm in range(args.num_motions):
 		# Loop over objects
 		for l in range(len(labels)):
 
-			seed=1
+			sign=1
 			# We multiply the sign by -1 to obtain a motion similar to the one shown in the supplementary (not exactly the same). Can be removed for general-purpose use
 			if not args.no_depth:
-				seed=-1
+				sign=-1
 			
 			# Random t (scalars and signs). Zeros and small motions are avoided as before
 			cix = (random.random()*0.05+0.05)* ( sign*(-1)**random.randrange(2) )
