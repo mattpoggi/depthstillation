@@ -39,7 +39,7 @@ When trained with our data, state-of-the-art optical flow networks achieve super
 
 ## Usage
 
-Install the project requirements in a new python 3 environment.
+Install the project requirements in a new python 3 environment:
 
 ```
 virtualenv -p python3 learning_flow_env
@@ -47,7 +47,7 @@ source learning_flow_env/bin/activate
 pip install -r requirements.txt
 ```
 
-Compile the `forward_warping` module, written in C (required to handle warping collisions).
+Compile the `forward_warping` module, written in C (required to handle warping collisions):
 
 ```
 cd external/forward_warping
@@ -55,7 +55,7 @@ bash compile.sh
 cd ../..
 ```
 
-You are now ready to run the `depthstillation.py` script
+You are now ready to run the `depthstillation.py` script:
 
 ```
 python depthstillation.py 
@@ -93,16 +93,18 @@ The results are saved in `dCOCO` folder, organized as follows:
 * `M'`: M' mask
 * `P`: P mask
 
+We report the list of files used to depthstill `dCOCO` in `samples/dCOCO_file_list.txt`
+
 ## Supplementary
 
-We report here the list of commands to obtain, in the same order, the Figures shown in Sections 2-4.
-* Section 2: the first figure is obtained with default parameters, then we use `--no_depth` and `--no_depth --segment` respectively
-* Section 3: the first figure is obtained with `--no_sharp`, the remaining figures with default parameters or by setting `--mask_type "H"`.
-* Section 4: we show three times the results obtained by default parameters, followed respectively by figures generated using `--change_k`, `--change_motion` and `--segment` individually.
+We report here the list of commands to obtain, in the same order, the Figures shown in Sections 2-4 of the Supplementary Material:
+* Section 2 -- the first figure is obtained with default parameters, then we use `--no_depth` and `--no_depth --segment` respectively
+* Section 3 -- the first figure is obtained with `--no_sharp`, the remaining figures with default parameters or by setting `--mask_type "H"`.
+* Section 4 -- we show three times the results obtained by default parameters, followed respectively by figures generated using `--change_k`, `--change_motion` and `--segment` individually.
 
 ## Weights
 
-We provide RAFT models trained in our experiments. To run them and reproduce our results, please refer to [RAFT repository](https://github.com/princeton-vl/RAFT).
+We provide RAFT models trained in our experiments. To run them and reproduce our results, please refer to [RAFT repository](https://github.com/princeton-vl/RAFT):
 
 * Tab. 4 (C) [dCOCO](https://drive.google.com/file/d/1MIcP0GpAp6KIjL-kr_-nSiEB4axKEidv/view?usp=sharing) (D) [Ch->Th->dCOCO](https://drive.google.com/file/d/15SIwH5Gzo3BSoKgEaBgPuLImuUbfGHPz/view?usp=sharing) 
 * Tab. 5 (C) [dCOCO (fine-tuned)](https://drive.google.com/file/d/1hpPy781c_fOOQUpQooewgdPuvJJuASwM/view?usp=sharing) (D) [Ch->Th->dCOCO (fine-tuned)](https://drive.google.com/file/d/1dheYMoRIPQLV-8QilXauyep4rclVvlFz/view?usp=sharing) 
