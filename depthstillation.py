@@ -1,10 +1,3 @@
-#
-# CONFIDENTIAL
-# This code is attached as supplementary material to CVPR 2021 Anonymous submission number 980
-# "Learning optical flow from still images"
-# Use is granted according to policies in http://cvpr2021.thecvf.com/node/33#submission-guidelines
-#
-
 # Ctypes package used to call the forward warping C library
 from numpy.ctypeslib import ndpointer
 from ctypes import *
