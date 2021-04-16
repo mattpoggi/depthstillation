@@ -111,6 +111,8 @@ We provide RAFT models trained in our experiments. To run them and reproduce our
 * Tab. 7 (C) [dDAVIS](https://drive.google.com/file/d/1cYmVozm31ByuwYybC54dnySO4_fYO_rl/view?usp=sharing) 
 * Tab. 8 (C) [dKITTI](https://drive.google.com/file/d/1c2OqT4YbkZrw7OftPfOOiPn4geREgKnK/view?usp=sharing) 
 
+**Errata** - the crop size used to train on dCOCO is 472x368 (instead of 496x368)
+
 ## Contacts
 m [dot] poggi [at] unibo [dot] it
 
