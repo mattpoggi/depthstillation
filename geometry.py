@@ -1,7 +1,7 @@
 #
 # Classes and functions in this script are taken from https://github.com/nianticlabs/monodepth2
-# Use conditions available in the LICENSE file at https://github.com/nianticlabs/monodepth2/LICENSE
-#
+# Use conditions available in the LICENSE file at https://github.com/nianticlabs/monodepth2/blob/master/LICENSE
+# Copyright © Niantic, Inc. 2018. All rights reserved.
 
 from __future__ import absolute_import, division, print_function
 
