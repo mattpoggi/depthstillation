@@ -183,7 +183,7 @@ for idm in range(args.num_motions):
 		sax = ( (-1)**random.randrange(2) )
 		say = ( (-1)**random.randrange(2) ) 
 		saz = ( (-1)**random.randrange(2) ) 
-		# Random angles in -pi/36,pi/36, excluding -pi/18,pi/18 to avoid zeros / very small rotations
+		# Random angles in -pi/18,pi/18, excluding -pi/36,pi/36 to avoid zeros / very small rotations
 		ax = (random.random()*math.pi / 36.0 + math.pi / 36.0) * sax
 		ay = (random.random()*math.pi / 36.0 + math.pi / 36.0) * say
 		az = (random.random()*math.pi / 36.0 + math.pi / 36.0) * saz
